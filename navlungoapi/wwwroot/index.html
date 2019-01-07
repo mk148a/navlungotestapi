@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NavlunGO Taşıyıcılar</title>
+    <style>
+        input[type='submit'], button, [aria-label] {
+            cursor: pointer;
+        }
+
+        #spoiler {
+            display: none;
+        }
+
+        table {
+            font-family: Arial, sans-serif;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #0066CC;
+            color: white;
+        }
+
+        td {
+            border: 1px solid;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>NavlunGO Taşıyıcılar</h1>
+    <h3>Ekle</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-shipper" placeholder="Yeni taşıyıcı">
+        <input type="text" id="add-destinationCountry" placeholder="Ülke">
+        <input type="text" id="add-schedule" placeholder="Zamanlı görev için periyod(Cron job formatında)">
+        <input type="text" id="add-mailadress" placeholder="Zamanlı görev için mail adress">
+
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="spoiler">
+        <h3>Edit</h3>
+        <form class="my-form">
+            <input type="text" id="edit-shipper">
+            <input type="text" id="edit-destinationCountry">
+            <input type="text" id="edit-schedule">
+            <input type="text" id="edit-mailadress">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Shipper</th>
+            <th>Destination Country</th>
+            <th>Periyod</th>
+            <th>Mail Adresi</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="Jobs"></tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="site.js"></script>
+</body>
+</html>
