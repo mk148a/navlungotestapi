@@ -33,9 +33,9 @@ function getData() {
       getCount(data.length);
         //.append($("<td></td>").text(Job.cronjob.schedule)).append($("<td></td>").text(Job.cronjob.mailadress))
         $.each(data, function (key, Job) {  
-            alert(Job.toSource())
+           // alert(Job.toSource())
         const tr = $("<tr></tr>")
-            .append($("<td></td>").text(Job.shipper)).append($("<td></td>").text(Job.destinationCountry)).append($("<td></td>").text(Job.cronjob.schedule)).append($("<td></td>").text(Job.cronjob.mailadress))
+            .append($("<td></td>").text(Job.shipper)).append($("<td></td>").text(Job.destinationCountry)).append($("<td></td>").text(Job.schedule)).append($("<td></td>").text(Job.mailadress))
           .append(
             $("<td></td>").append(
               $("<button>Edit</button>").on("click", function() {
@@ -79,19 +79,17 @@ function getData() {
 function addItem() {
     //var cronJob = new Cronjob($("#add-mailadress").val(), $("#add-schedule").val());
     //var job = new Job($("#add-shipper").val(), $("#add-destinationCountry").val(), cronJob);
-    var Cronjob = {
-        mailadress: $("#add-mailadress").val(),
-        schedule: $("#add-schedule").val()
-    };
-    function Job(shipper, destinationCountry, cronjob)
+   
+    function Job(shipper, destinationCountry, mailadress,schedule)
     {
         this.shipper = shipper;
-        this.destinationCountry = destinationCountry;
-        this.cronjob = cronjob;
+        this.destinationCountry = destinationCountry;       
+        this.mailadress = mailadress;
+        this.schedule = schedule;
     };
-    var job = new Job($("#add-shipper").val(), $("#add-destinationCountry").val(), Cronjob);
-    //alert(job.toSource());
-    //alert(JSON.stringify(job).toSource());
+    var job = new Job($("#add-shipper").val(), $("#add-destinationCountry").val(),$("#add-mailadress").val(),$("#add-schedule").val());
+  //  alert(job.toSource());
+   // alert(JSON.stringify(job).toSource());
   $.ajax({
     type: "POST",
     accepts: "application/json",
@@ -125,32 +123,27 @@ function deleteItem(shipper) {
 }
 
 function editItem(shipper) {
-    $.each(Jobs, function (key, shipper) {
+    $.each(Jobs, function (key, Job) {
       if (Job.shipper === shipper) {
           $("#edit-destinationCountry").val(Job.destinationCountry);
           $("#edit-shipper").val(Job.shipper);
-          $("#edit-mailadress").val(Job.cronjob.mailadress);
-          $("#edit-schedule").val(Job.cronjob.schedule);        
+          $("#edit-mailadress").val(Job.mailadress);
+          $("#edit-schedule").val(Job.schedule);        
     }
   });
   $("#spoiler").css({ display: "block" });
 }
 
-
-
 $(".my-form").on("submit", function() {  
     //var cronJob = new Cronjob($("#edit-mailadress").val(), $("#edit-schedule").val());
     //var job = new Job($("#edit-shipper").val(), $("#edit-destinationCountry").val(), cronJob);
-    var Cronjob = {
-        mailadress: $("#edit-mailadress").val(),
-        schedule: $("#edit-schedule").val()
-    };
-    function Job(shipper, destinationCountry, cronjob) {
+    function Job(shipper, destinationCountry, mailadress, schedule) {
         this.shipper = shipper;
         this.destinationCountry = destinationCountry;
-        this.cronjob = cronjob;
+        this.mailadress = mailadress;
+        this.schedule = schedule;
     };
-    var job = new Job($("#edit-shipper").val(), $("#edit-destinationCountry").val(), Cronjob);
+    var job = new Job($("#edit-shipper").val(), $("#edit-destinationCountry").val(), $("#edit-mailadress").val(), $("#edit-schedule").val());
 
 
 

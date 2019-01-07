@@ -11,6 +11,7 @@ namespace navlungoapi.Models
         [Key]
         public string shipper { get; set; }
         public string destinationCountry { get; set; }
-        public CronJob cronjob { get; set; }
+        public string mailadress { get; set; }
+        public string schedule { get; set; }
     }
 }
