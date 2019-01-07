@@ -35,7 +35,7 @@ function getData() {
         $.each(data, function (key, Job) {  
            // alert(Job.toSource())
         const tr = $("<tr></tr>")
-            .append($("<td></td>").text(Job.shipper)).append($("<td></td>").text(Job.destinationCountry)).append($("<td></td>").text(Job.schedule)).append($("<td></td>").text(Job.mailadress))
+            .append($("<td></td>").text(Job.shipper)).append($("<td></td>").text(Job.destinationCountry)).append($("<td></td>").text(Job.schedule)).append($("<td></td>").text(Job.mailadress)).append($("<td></td>").text(Job.crondesc))
           .append(
             $("<td></td>").append(
               $("<button>Edit</button>").on("click", function() {
@@ -143,7 +143,7 @@ $(".my-form").on("submit", function() {
         this.mailadress = mailadress;
         this.schedule = schedule;
     };
-    var job = new Job($("#edit-shipper").val(), $("#edit-destinationCountry").val(), $("#edit-mailadress").val(), $("#edit-schedule").val());
+    var job = new Job($("#edit-shipper").val(), $("#edit-destinationCountry").val(), $("#edit-mailadress").val(), $("#add-schedule").val());
 
 
 
