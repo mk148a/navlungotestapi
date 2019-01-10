@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "navlungotestapi", "navlungotestapi\navlungotestapi.csproj", "{A82EF2EF-E2B8-4B95-B147-844B39230A42}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "navlungoapi", "navlungoapi\navlungoapi.csproj", "{4F45C7FE-9DA2-465A-8AE1-28CE8CC6A33B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "..\..\..\Documents\2.2\TodoApi\TodoApi.csproj", "{98D35570-5CF3-4EC6-AD5F-F9E1C978906D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A82EF2EF-E2B8-4B95-B147-844B39230A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A82EF2EF-E2B8-4B95-B147-844B39230A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A82EF2EF-E2B8-4B95-B147-844B39230A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A82EF2EF-E2B8-4B95-B147-844B39230A42}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F45C7FE-9DA2-465A-8AE1-28CE8CC6A33B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F45C7FE-9DA2-465A-8AE1-28CE8CC6A33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F45C7FE-9DA2-465A-8AE1-28CE8CC6A33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F45C7FE-9DA2-465A-8AE1-28CE8CC6A33B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98D35570-5CF3-4EC6-AD5F-F9E1C978906D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98D35570-5CF3-4EC6-AD5F-F9E1C978906D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98D35570-5CF3-4EC6-AD5F-F9E1C978906D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98D35570-5CF3-4EC6-AD5F-F9E1C978906D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
