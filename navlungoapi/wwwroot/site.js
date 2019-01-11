@@ -143,7 +143,7 @@ $(".my-form").on("submit", function() {
         this.mailadress = mailadress;
         this.schedule = schedule;
     };
-    var job = new Job($("#edit-shipper").val(), $("#edit-destinationCountry").val(), $("#edit-mailadress").val(), $("#add-schedule").val());
+    var job = new Job($("#edit-shipper").val(), $("#edit-destinationCountry").val(), $("#edit-mailadress").val(), $("#edit-schedule").val());
 
 
 

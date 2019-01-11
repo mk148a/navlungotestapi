@@ -21,7 +21,7 @@ namespace navlungoapi.Controllers
             if (_context.Jobs.Count() == 0)
             {
                
-                _context.Jobs.Add(new Job("navlungo", "Almanya","mk148a@hotmail.com", "* * * * *") );
+               // _context.Jobs.Add(new Job("navlungo", "Almanya","mk148a@hotmail.com", "* * * * *") );
                 // _context.Jobs.Add(new Job { shipper = "navlungo", destinationCountry = "Almanya"});
                 _context.SaveChanges();
 
